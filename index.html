@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Erinnerungen an die Schule – Modalverben im Präteritum</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#eef4fa;--card:#fff;--ink:#1d2b3a;--blue:#0f7ac6;--blue2:#d6e8f7;--line:#8fb3d1;--ok:#1e8a4c;--okbg:#dff3e6;--bad:#c0392b;--badbg:#fbe3e0;--hl:#ffe91f;--sand:#fdeee0;--sandline:#f0a56a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#111a24;--card:#18242f;--ink:#e6eef6;--blue:#58b0f0;--blue2:#23394d;--line:#46698a;--ok:#6fdc9a;--okbg:#17372a;--bad:#ff8c80;--badbg:#412420;--hl:#8a7d00;--sand:#2c2218;--sandline:#a2693a}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Fira Sans','Segoe UI',Arial,sans-serif;font-size:18px;line-height:1.5}
+header{background:var(--blue);color:#fff;padding:28px 20px}
+header h1{margin:0 auto;max-width:900px;font-size:1.7rem;font-weight:600}
+header p{margin:4px auto 0;max-width:900px;opacity:.9}
+main{max-width:900px;margin:0 auto;padding:16px}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;margin:20px 0}
+h2{margin:0 0 6px;font-size:1.25rem;font-weight:600;display:flex;gap:12px;align-items:baseline}
+h2 span.n{background:var(--blue);color:#fff;border-radius:6px;min-width:34px;text-align:center;padding:0 8px}
+.hint{margin:0 0 14px;color:var(--ink);opacity:.8}
+.post{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line)}
+.post:first-of-type{border-top:0}
+.post .meta{flex:0 0 120px;font-size:.85rem;line-height:1.3}
+.post .meta b{display:block;font-style:italic;font-weight:500}
+.post .id{display:inline-block;border:1px solid var(--line);border-radius:3px;padding:0 8px;font-size:1.1rem;margin-bottom:4px}
+.post p{margin:0;flex:1}
+.w{cursor:pointer;border-radius:3px;padding:0 1px}
+.w:hover{background:var(--blue2)}
+.w.on{background:var(--hl);color:inherit}
+.w.right{background:var(--okbg);outline:2px solid var(--ok)}
+.w.wrong{background:var(--badbg);outline:2px solid var(--bad)}
+.w.miss{outline:2px dashed var(--bad)}
+table{border-collapse:collapse;width:100%;margin:8px 0}
+th,td{border:1px solid var(--sandline);padding:6px 8px;text-align:left}
+th{background:var(--sand);font-weight:600}
+td:first-child{font-weight:500}
+input,select{font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:5px;padding:3px 6px;max-width:100%}
+input{width:100%;min-width:90px}
+input:focus,select:focus,button:focus-visible{outline:3px solid var(--blue);outline-offset:1px}
+.ok{background:var(--okbg)!important;border-color:var(--ok)!important}
+.no{background:var(--badbg)!important;border-color:var(--bad)!important}
+button{font:inherit;cursor:pointer}
+.btn{background:var(--blue);color:#fff;border:0;border-radius:6px;padding:7px 16px;margin:10px 8px 0 0}
+.btn.ghost{background:transparent;color:var(--blue);border:1px solid var(--blue)}
+.res{display:inline-block;margin-left:6px;font-weight:500}
+.rule li{margin:10px 0}
+.q{margin:10px 0}
+.q .dlg{display:block;margin-left:26px}
+.dot{display:inline-block;width:20px;color:var(--blue)}
+.opt{background:var(--card);color:inherit;border:1px solid var(--line);border-radius:4px;padding:0 8px;margin:0 2px}
+.opt.sel{background:var(--blue2);border-color:var(--blue);font-weight:600}
+.scroll{overflow-x:auto}
+@media (max-width:600px){.post{flex-direction:column;gap:4px}.post .meta{flex:none}}
+</style>
+</head>
+<body>
+<header>
+<h1>Erinnerungen an die Schule</h1>
+<p>Modalverben im Präteritum: wollen, müssen, können, dürfen, sollen</p>
+</header>
+<main>
+
+<section id="a1">
+<h2><span class="n">1</span>Lesen und markieren</h2>
+<p class="hint">Lesen Sie die Beiträge. Klicken Sie auf die Modalverben im Präteritum, um sie zu markieren. (Ein Beispiel ist schon markiert.)</p>
+<div id="posts"></div>
+<button class="btn" id="chk1">Prüfen</button><button class="btn ghost" id="rst1">Neu starten</button><span class="res" id="r1"></span>
+</section>
+
+<section id="a2">
+<h2><span class="n">2</span>Ergänzen Sie die Präteritum-Formen</h2>
+<p class="hint">Schreiben Sie die fehlenden Formen in die Tabelle.</p>
+<div class="scroll"><table id="t2"></table></div>
+<button class="btn" id="chk2">Prüfen</button><button class="btn ghost" id="sol2">Lösung zeigen</button><span class="res" id="r2"></span>
+</section>
+
+<section id="a3">
+<h2><span class="n">3</span>Ordnen Sie die Endungen zu</h2>
+<p class="hint">Welche Endung gehört zu welcher Person? Wählen Sie aus.</p>
+<div class="scroll"><table id="t3"></table></div>
+<button class="btn" id="chk3">Prüfen</button><span class="res" id="r3"></span>
+</section>
+
+<section id="a4">
+<h2><span class="n">4</span>Die Regel ergänzen</h2>
+<p class="hint">Was fällt Ihnen auf? Ergänzen Sie die Regel mit den Wörtern aus der Liste.</p>
+<p><b>Wortliste:</b> <i>kein Umlaut · -t- · gleiche · -ten · -te</i></p>
+<ol class="rule" id="rule"></ol>
+<button class="btn" id="chk4">Prüfen</button><span class="res" id="r4"></span>
+</section>
+
+<section id="a5">
+<h2><span class="n">5</span>Welche Form ist richtig?</h2>
+<p class="hint">Klicken Sie die richtige Form an.</p>
+<div id="ex5"></div>
+<button class="btn" id="chk5">Prüfen</button><button class="btn ghost" id="rst5">Neu starten</button><span class="res" id="r5"></span>
+</section>
+</main>
+
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+
+/* ---------- 1 ---------- */
+const posts=[
+['1','Ole Jansen','2005–2014','Ich [[wollte]] immer erwachsen sein. Das verstehe ich jetzt gar nicht mehr. In der Schule hatte ich so viel Freizeit. Und sechs Wochen Sommerferien! Da [[musste]] man nichts machen und konnte immer ins Schwimmbad fahren.'],
+['2','Sorin Popa','1993–1998','Ich bin erst mit 14 Jahren nach Deutschland gekommen. Am Anfang war es schwer, ich [[konnte]] ja die Sprache nicht richtig sprechen. Aber nach ein paar Monaten hatte ich viele Freunde und dann war alles gut. Ich hatte mit ihnen immer einen Riesenspaß! Hauptsache, wir [[konnten]] uns jeden Tag sehen.'],
+['3','Sybille Michel','1996–2002','Wer kennt noch die Englischlehrerin Frau Lindner? Wir [[sollten]] jeden Tag 30 Wörter lernen und [[mussten]] dreimal pro Woche einen Vokabeltest schreiben. Man [[durfte]] keinen Fehler machen, sie war sofort wütend. Zum Glück hatte ich auch tolle Lehrer und der Direktor war nett!'],
+['4','Nael Sanchez','2003–2012','Ich [[musste]] jeden Tag schon um sechs Uhr aufstehen. Schrecklich! Ich habe auf dem Land gewohnt und [[musste]] mit dem Bus um sieben Uhr zur Schule fahren.'],
+['A','Kati Grubens','1993–2000','Ja, Frau Lindner war sehr streng. Aber ich denke gern an die Schule. Ich hatte gute Lehrer und der Unterricht hat meistens Spaß gemacht. Ich habe kurz vor dem Abitur die Schule gewechselt, aber mit vielen Freunden von der alten Schule habe ich heute noch Kontakt.'],
+['B','Anna Keindl','2010–2019','Ich [[musste]] erst um Viertel nach sieben aufstehen, immer noch früh … Jetzt bin ich an der Uni und kann wenigstens an zwei Tagen später kommen. 🙂'],
+['C','Liam Davis','1989–1998','Oh ja, die Freunde waren auch für mich immer wichtig. Ich habe viele lustige Erinnerungen an die Schulzeit. Die Partys waren auch immer witzig. Nur das Essen in der Cafeteria war furchtbar.'],
+['D','Emin Özer','2006–2015','Ja, das kenne ich gut. Jetzt arbeite ich in einem Reisebüro und habe so wenig Zeit. In der Schulzeit [[konnte]] ich nachmittags meine Freunde treffen und alle paar Wochen waren Ferien. Ich [[konnte]] ausschlafen! Aber heute …']
+];
+posts[0][3]=posts[0][3].replace('Da [[musste]] man nichts machen und konnte','Da [[musste]] man nichts machen und [[konnte]]');
+function build1(){
+ $('#posts').innerHTML=posts.map(p=>{
+  const html=p[3].split(' ').map(t=>{
+   const m=/^\[\[(.+)\]\](.*)$/.exec(t);
+   if(m)return `<span class="w" data-m="1">${m[1]}</span>${m[2]}`;
+   return `<span class="w">${esc(t)}</span>`;
+  }).join(' ');
+  return `<div class="post"><div class="meta"><span class="id">${p[0]}</span><b>${p[1]}</b>Schulzeit:<br>${p[2]}</div><p>${html}</p></div>`;
+ }).join('');
+ const first=document.querySelector('.w[data-m]');first.classList.add('on');
+ $('#r1').textContent='';
+}
+build1();
+$('#posts').addEventListener('click',e=>{const w=e.target.closest('.w');if(w)w.classList.toggle('on')});
+$('#chk1').onclick=()=>{
+ let right=0,wrong=0,miss=0;
+ document.querySelectorAll('.w').forEach(w=>{
+  w.classList.remove('right','wrong','miss');
+  const on=w.classList.contains('on'),m=!!w.dataset.m;
+  if(on&&m){w.classList.add('right');right++}
+  else if(on){w.classList.add('wrong');wrong++}
+  else if(m){w.classList.add('miss');miss++}
+ });
+ $('#r1').textContent=`${right} richtig, ${wrong} falsch markiert, ${miss} fehlen noch (gestrichelt).`;
+};
+$('#rst1').onclick=build1;
+
+/* ---------- 2 ---------- */
+const verbs=['wollen','müssen','können','dürfen','sollen'];
+const stems=['woll','muss','konn','durf','soll'];
+const pers=['ich','du','er/es/sie','wir','ihr','sie/Sie'];
+const ends=['te','test','te','ten','tet','ten'];
+const given=[ // [verb][person]
+ [1,1,0,1,0,1],[0,1,1,0,0,0],[0,1,0,1,0,1],[1,1,0,1,1,0],[1,0,1,0,1,1]];
+$('#t2').innerHTML='<tr><th></th>'+verbs.map(v=>`<th>${v}</th>`).join('')+'</tr>'+
+ pers.map((p,i)=>`<tr><td>${p}</td>`+verbs.map((v,j)=>{
+  const f=stems[j]+ends[i];
+  return given[j][i]?`<td>${f}</td>`:`<td><input data-a="${f}" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="${p} ${v}"></td>`;
+ }).join('')+'</tr>').join('');
+$('#chk2').onclick=()=>{
+ let ok=0,all=0;
+ document.querySelectorAll('#t2 input').forEach(i=>{
+  all++;const good=i.value.trim().toLowerCase()===i.dataset.a;
+  i.classList.toggle('ok',good);i.classList.toggle('no',!good&&i.value!=='');
+  if(good)ok++;
+ });
+ $('#r2').textContent=`${ok} von ${all} richtig.`;
+};
+$('#sol2').onclick=()=>{document.querySelectorAll('#t2 input').forEach(i=>{i.value=i.dataset.a});$('#chk2').click()};
+
+/* ---------- 3 ---------- */
+const eopts=['-te','-test','-ten','-tet'];
+$('#t3').innerHTML='<tr><th>Person</th><th>Endung</th></tr>'+pers.map((p,i)=>
+ `<tr><td>${p}</td><td><select data-a="-${ends[i]}"><option value="">–</option>${eopts.map(o=>`<option>${o}</option>`).join('')}</select></td></tr>`).join('');
+$('#chk3').onclick=()=>{
+ let ok=0;
+ document.querySelectorAll('#t3 select').forEach(s=>{
+  const g=s.value===s.dataset.a;s.classList.toggle('ok',g);s.classList.toggle('no',!g&&s.value!=='');if(g)ok++;
+ });
+ $('#r3').textContent=`${ok} von 6 richtig.`;
+};
+
+/* ---------- 4 ---------- */
+const wl=['kein Umlaut','-t-','gleiche','-ten','-te'];
+const sel=a=>`<select data-a="${a}"><option value="">–</option>${wl.map(o=>`<option>${o}</option>`).join('')}</select>`;
+const rules=[
+ `Der Stamm hat im Präteritum ${sel('kein Umlaut')}: müssen → <i>musste</i>, können → <i>konnte</i>, dürfen → <i>durfte</i>.`,
+ `Zwischen Stamm und Endung steht immer ${sel('-t-')}.`,
+ `Die Formen für <i>ich</i> und <i>er/es/sie</i> sind gleich: Sie haben die ${sel('gleiche')} Endung, nämlich ${sel('-te')}.`,
+ `Die Formen für <i>wir</i> und <i>sie/Sie</i> sind auch gleich: Sie haben die Endung ${sel('-ten')}.`
+];
+$('#rule').innerHTML=rules.map(r=>`<li>${r}</li>`).join('');
+$('#chk4').onclick=()=>{
+ let ok=0,all=0;
+ document.querySelectorAll('#rule select').forEach(s=>{
+  all++;const g=s.value===s.dataset.a;s.classList.toggle('ok',g);s.classList.toggle('no',!g&&s.value!=='');if(g)ok++;
+ });
+ $('#r4').textContent=`${ok} von ${all} richtig.`;
+};
+
+/* ---------- 5 ---------- */
+const items=[
+ [['q','{*Musstet|Musste} ihr am Nachmittag in der Schule bleiben?'],['a','Ja, wir hatten bis 17 Uhr Unterricht und dann {konntest|*konnten} wir nach Hause gehen.']],
+ [['q','{Durftet|*Durftest} du in der Schule das Handy benutzen?'],['a','Nein, das war verboten.']],
+ [['q','Ich {*konnte|konnten} zu Fuß zur Schule gehen. Und du?'],['a','Ich {wolltest|*wollte} mit dem Fahrrad fahren, aber ich {*durfte|durften} nicht. Ich {musstet|*musste} mit dem Bus fahren.']],
+ [['q','{*Musstest|Musste} du eine Schuluniform tragen?'],['a','Ja, du auch?']],
+ [['q','{Konntest|*Konntet} ihr in der Schule viel am Computer lernen?'],['a','Wir haben oft mit dem Tablet gearbeitet. Da {*konntet|konnte} man viele Übungen machen.']]
+];
+// Korrektur der Markierung: Frage 1 "ihr" -> Musstet; Frage 5 "ihr" -> Konntet; "man" -> konnte
+items[4][1][1]='Wir haben oft mit dem Tablet gearbeitet. Da {konntet|*konnte} man viele Übungen machen.';
+items[1][0][1]='{Durftet|*Durftest} du in der Schule das Handy benutzen?';
+function build5(){
+ $('#ex5').innerHTML=items.map((it,i)=>`<div class="q"><b>${i+1}.</b> `+it.map(([t,s])=>
+  `<span class="dlg"><span class="dot">${t==='q'?'○':'●'}</span>`+s.replace(/\{([^}]+)\}/g,(m,g)=>
+   '<span class="grp">'+g.split('|').map(o=>{const c=o[0]==='*';return `<button type="button" class="opt" data-c="${c?1:0}">${c?o.slice(1):o}</button>`}).join('')+'</span>')+'</span>').join('')+'</div>').join('');
+ $('#r5').textContent='';
+}
+build5();
+$('#ex5').addEventListener('click',e=>{
+ const b=e.target.closest('.opt');if(!b)return;
+ b.parentNode.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel','ok','no'));
+ b.classList.add('sel');
+});
+$('#chk5').onclick=()=>{
+ let ok=0,all=0;
+ document.querySelectorAll('#ex5 .grp').forEach(g=>{
+  all++;const s=g.querySelector('.sel');
+  g.querySelectorAll('.opt').forEach(o=>o.classList.remove('ok','no'));
+  if(s){const good=s.dataset.c==='1';s.classList.add(good?'ok':'no');if(good)ok++}
+ });
+ $('#r5').textContent=`${ok} von ${all} richtig.`;
+};
+$('#rst5').onclick=build5;
+</script>
+</body>
+</html>
